@@ -2,10 +2,12 @@
 
 Track and perform action by doing interactive swipe transition or back button press for SwiftUI.
 
+![](./demo.png)
+
 ## Usage
 
 ```swift
-struct SomeView: View {
+struct MyView: View {
     var body: some View {
         ZStack {
             // ...

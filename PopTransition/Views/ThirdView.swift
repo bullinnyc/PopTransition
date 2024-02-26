@@ -17,18 +17,13 @@ struct ThirdView: View {
     
     var body: some View {
         ZStack {
-            Color.orange
+            Color.mint
                 .opacity(0.5)
                 .ignoresSafeArea()
             
-            Button(
-                action: {
-                    isPresented = true
-                },
-                label: {
-                    Text("Show modal view")
-                }
-            )
+            Button("Show modal view") {
+                isPresented.toggle()
+            }
         }
         .onPopTransition { transitionState in
             switch transitionState {
@@ -43,7 +38,15 @@ struct ThirdView: View {
             }
         }
         .sheet(isPresented: $isPresented) {
-            Text("Hello, World!")
+            ZStack {
+                Color.pink
+                    .opacity(0.5)
+                    .ignoresSafeArea()
+                
+                Button("Dismiss") {
+                    isPresented.toggle()
+                }
+            }
         }
     }
 }

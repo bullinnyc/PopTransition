@@ -15,6 +15,7 @@ struct PopTransitionApp: App {
     var body: some Scene {
         WindowGroup {
             FirstView()
+                .statusBarHidden()
         }
     }
 }

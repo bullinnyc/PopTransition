@@ -13,7 +13,7 @@ struct SecondView: View {
     
     var body: some View {
         ZStack {
-            Color.green
+            Color.indigo
                 .opacity(0.5)
                 .ignoresSafeArea()
             
